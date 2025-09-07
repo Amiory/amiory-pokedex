@@ -1,7 +1,8 @@
 {
   "name": "amiory-pokedex",
   "version": "1.0.0",
-  "description": "",
+  "description": "a simple cli tools printing moves of pokemon.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +12,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^18.0.0"
+  }
 }
