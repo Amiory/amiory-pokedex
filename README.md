@@ -18,7 +18,7 @@ This project was built for learning how to create Node.js CLI tools.
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/amiory-pokedex.git
+git clone https://github.com/Amiory/amiory-pokedex.git
 cd amiory-pokedex
 npm install
 ```
