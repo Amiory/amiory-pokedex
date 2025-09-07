@@ -18,9 +18,9 @@ inquirer
   .then((answers) => {
     const pokemon = answers.pokemon;
     const moveCount = answers.moveCount;
-    if (moveCount.match(/\[0-9]+/) || moveCount == "")
+    if (pokemon && (moveCount.match(/\[0-9]+/) || moveCount == ""))
       printMoves(pokemon, moveCount);
-    else console.log("Please Enter a valid number or press Enter");
+    else console.log("Invalid input");
   })
   .catch((error) => {
     if (error.isTtyError) {
@@ -43,7 +43,7 @@ const printMoves = async (pokemonName, moveCount) => {
   if (response.ok) {
     const pokemon = await response.json();
     console.log(`Printing moves for ${pokemon.name}:`);
-    
+
     const moves = pokemon.moves.map(({ move }) => move.name);
     for (const move of moves.slice(0, moveCount || moves.length)) {
       console.log(move);
